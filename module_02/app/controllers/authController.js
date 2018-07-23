@@ -11,7 +11,6 @@ module.exports = {
   },
 
   async register(req, res) {
-    console.log(req.body);
     const { email } = req.body;
 
     if (await User.findOne({ where: { email } })) {
