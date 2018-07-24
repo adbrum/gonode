@@ -9,6 +9,7 @@ const routes = require('./app/routes');
 const sessionConfig = require('./config/session');
 
 const app = express();
+
 app.use(express.static(path.resolve('app', 'public')));
 
 nunjucks.configure(path.resolve('app', 'views'), {
@@ -17,11 +18,8 @@ nunjucks.configure(path.resolve('app', 'views'), {
 });
 
 app.set('view engine', 'njk');
-
 app.use(bodyParser.urlencoded({ extended: false }));
-
 app.use(session(sessionConfig));
-
 app.use(flash());
 
 app.use('/', routes);
