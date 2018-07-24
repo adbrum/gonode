@@ -16,8 +16,9 @@
 <script src="/main.js"></script>
 
 <body>
-  {% block body %}
-  {% endblock %}
+  {% include 'partials/flash.njk' %}
+
+  {% block body %} {% endblock %}
 </body>
 
 </html>
