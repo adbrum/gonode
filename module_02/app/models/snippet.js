@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Snippet = sequelize.define('Snippet', {
-    tutle: DataTypes.STRING,
+    title: DataTypes.STRING,
     content: DataTypes.TEXT,
   });
 
