@@ -7,7 +7,7 @@ const md = require('markdown-it')({
     }
 
     return `<pre class="hljs"><code>${md.utils.escapeHtml(str.trim(), true)}</code></pre>`;
-  }
+  },
 });
 
 module.exports = (sequelize, DataTypes) => {
