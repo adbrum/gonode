@@ -22,6 +22,7 @@ routes.use(authMiddlewares);
  * User
  */
 routes.put('/users', controllers.userController.update);
+routes.get('/users/me', controllers.userController.me);
 
 /**
  * Follows
